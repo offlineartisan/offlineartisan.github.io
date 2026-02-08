@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Commit+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --fg: #e0e0e0;
+  --fg-dim: #888;
+  --border: #333;
+  --accent: #fff;
+  --link: #e0e0e0;
+  --link-hover: #fff;
+  --max-width: 720px;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Commit Mono', 'Courier New', monospace;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--accent);
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: none;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  filter: invert(1);
+}
+
+.logo span {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+}
+
+/* Page title */
+h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--fg-dim);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* About page */
+.about-content p {
+  max-width: 60ch;
+}
+
+.about-content .github-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* Contact page */
+.contact-content .email-link {
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Blog */
+.blog-post {
+  margin-bottom: 3rem;
+}
+
+.blog-post .meta {
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.blog-post blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.blog-post strong {
+  color: var(--accent);
+}
+
+.sources {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+
+.sources p {
+  margin-bottom: 0.25rem;
+}
+
+.sources a {
+  word-break: break-all;
+}
+
+/* Separator */
+.separator {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem 1.25rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
